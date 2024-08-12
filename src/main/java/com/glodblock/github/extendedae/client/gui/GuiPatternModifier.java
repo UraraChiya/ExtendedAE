@@ -26,15 +26,14 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
     private final Button replace;
     private final List<Button> multiBtns = new ArrayList<>();
 
-    private int[] multis = {2, 3, 5, 7, 11, 13,
-                            17, 19, 21, 23, 27, 29,
-                            4, 16, 64, 256, 1024, 4096};
-
-    for (int i = 0; i < multis.length / 2; i++) {
-            int temp = multis[i];
-            multis[i] = multis[length - i - 1];
-            multis[multis.length - i - 1] = temp;
-        }
+    private int[] multis = {
+        4096, 1024, 256, 64, 16, 4,
+        29, 27, 23, 21, 19, 17,
+        13, 11, 7, 5, 3, 2
+    }
+    // {2, 3, 5, 7, 11, 13,
+    // 17, 19, 21, 23, 27, 29,
+    // 4, 16, 64, 256, 1024, 4096};
 
     public GuiPatternModifier(ContainerPatternModifier menu, Inventory playerInventory, Component title, ScreenStyle style) {
         super(menu, playerInventory, title, style);
