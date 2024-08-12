@@ -27,7 +27,7 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
     private final List<Button> multiBtns = new ArrayList<>();
 
     private int[] multis = {
-        4, 16, 64, 256, 1024, 4096
+        4, 16, 64, 256, 1024, 4096,
         17, 19, 21, 23, 27, 29,
         2, 3, 5, 7, 11, 13
     };
