@@ -102,7 +102,7 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
     @Override
     public void init() {
         super.init();
-        this.multiBtns.get(0).setPosition(this.leftPos + 7, this.topPos + 19);
+        this.multiBtns.get(0).setPosition(this.leftPos + 7, this.topPos - 19);
         this.multiBtns.get(1).setPosition(this.leftPos + 37, this.topPos + 19);
         this.multiBtns.get(2).setPosition(this.leftPos + 67, this.topPos + 19);
         this.multiBtns.get(3).setPosition(this.leftPos + 97, this.topPos + 19);
