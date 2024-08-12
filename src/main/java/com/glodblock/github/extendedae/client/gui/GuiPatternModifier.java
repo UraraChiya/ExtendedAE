@@ -26,10 +26,15 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
     private final Button replace;
     private final List<Button> multiBtns = new ArrayList<>();
 
-    private int[] multis = {2,3,5,7,
-                        11,13,17,19,
-                        21,23,27,29,
-                        4,16,64,256};
+    private int[] multis = {2, 3, 5, 7, 11, 13,
+                            17, 19, 21, 23, 27, 29,
+                            4, 16, 64, 256, 1024, 4096};
+
+    for (int i = 0; i < multis.length / 2; i++) {
+            int temp = multis[i];
+            multis[i] = multis[length - i - 1];
+            multis[multis.length - i - 1] = temp;
+        }
 
     public GuiPatternModifier(ContainerPatternModifier menu, Inventory playerInventory, Component title, ScreenStyle style) {
         super(menu, playerInventory, title, style);
@@ -116,14 +121,14 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
     public void init() {
         super.init();
         for(int i = 0; i < multis.length; i++) {
-            int x = i % 4;
-            int y = i / 4;
-            this.multiBtns.get(i).setPosition(this.leftPos + 7 + 30 * x,this.topPos - 20 - 22 * y);
+            int x = i % 6;
+            int y = i / 6;
+            this.multiBtns.get(i).setPosition(this.leftPos + 30 * x,this.topPos - 20 - 20 * y);
         }
-        this.multiBtns.get(0).setPosition(this.leftPos + 7, this.topPos + 19);
-        this.multiBtns.get(1).setPosition(this.leftPos + 37, this.topPos + 19);
-        this.multiBtns.get(2).setPosition(this.leftPos + 67, this.topPos + 19);
-        this.multiBtns.get(3).setPosition(this.leftPos + 97, this.topPos + 19);
+        this.multiBtns.get(multis.length + 0).setPosition(this.leftPos + 7, this.topPos + 19);
+        this.multiBtns.get(multis.length + 1).setPosition(this.leftPos + 37, this.topPos + 19);
+        this.multiBtns.get(multis.length + 2).setPosition(this.leftPos + 67, this.topPos + 19);
+        this.multiBtns.get(multis.length + 3).setPosition(this.leftPos + 97, this.topPos + 19);
         this.multiBtns.get(multis.length + 4).setPosition(this.leftPos + 130, this.topPos + 19);
         this.multiBtns.forEach(this::addRenderableWidget);
         this.clone.setPosition(this.leftPos + 79, this.topPos + 35);
