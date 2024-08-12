@@ -49,30 +49,30 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
                         .build()
             );
         }
-        // this.multiBtns.add(
-        //         Button.builder(Component.literal("x2"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 2, false)))
-        //                 .size(23, 18)
-        //                 .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.multi.desc", 2)))
-        //                 .build()
-        // );
-        // this.multiBtns.add(
-        //         Button.builder(Component.literal("x10"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 10, false)))
-        //                 .size(23, 18)
-        //                 .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.multi.desc", 10)))
-        //                 .build()
-        // );
-        // this.multiBtns.add(
-        //         Button.builder(Component.literal("÷2"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 2, true)))
-        //                 .size(23, 18)
-        //                 .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.div.desc", 2)))
-        //                 .build()
-        // );
-        // this.multiBtns.add(
-        //         Button.builder(Component.literal("÷10"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 10, true)))
-        //                 .size(23, 18)
-        //                 .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.div.desc", 10)))
-        //                 .build()
-        // );
+        this.multiBtns.add(
+                Button.builder(Component.literal("x2"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 2, false)))
+                        .size(23, 18)
+                        .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.multi.desc", 2)))
+                        .build()
+        );
+        this.multiBtns.add(
+                Button.builder(Component.literal("x10"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 10, false)))
+                        .size(23, 18)
+                        .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.multi.desc", 10)))
+                        .build()
+        );
+        this.multiBtns.add(
+                Button.builder(Component.literal("÷2"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 2, true)))
+                        .size(23, 18)
+                        .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.div.desc", 2)))
+                        .build()
+        );
+        this.multiBtns.add(
+                Button.builder(Component.literal("÷10"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 10, true)))
+                        .size(23, 18)
+                        .tooltip(Tooltip.create(Component.translatable("gui.expatternprovider.pattern_modifier.div.desc", 10)))
+                        .build()
+        );
         this.multiBtns.add(
                 Button.builder(Component.translatable("gui.expatternprovider.pattern_modifier.clear"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("clear")))
                         .size(36, 18)
@@ -120,11 +120,11 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
             int y = i / 4;
             this.multiBtns.get(i).setPosition(this.leftPos + 7 + 30 * x,this.topPos - 20 - 22 * y);
         }
-        // this.multiBtns.get(0).setPosition(this.leftPos + 7, this.topPos + 19);
-        // this.multiBtns.get(1).setPosition(this.leftPos + 37, this.topPos + 19);
-        // this.multiBtns.get(2).setPosition(this.leftPos + 67, this.topPos + 19);
-        // this.multiBtns.get(3).setPosition(this.leftPos + 97, this.topPos + 19);
-        this.multiBtns.get(multis.length).setPosition(this.leftPos + 130, this.topPos + 19);
+        this.multiBtns.get(0).setPosition(this.leftPos + 7, this.topPos + 19);
+        this.multiBtns.get(1).setPosition(this.leftPos + 37, this.topPos + 19);
+        this.multiBtns.get(2).setPosition(this.leftPos + 67, this.topPos + 19);
+        this.multiBtns.get(3).setPosition(this.leftPos + 97, this.topPos + 19);
+        this.multiBtns.get(multis.length + 4).setPosition(this.leftPos + 130, this.topPos + 19);
         this.multiBtns.forEach(this::addRenderableWidget);
         this.clone.setPosition(this.leftPos + 79, this.topPos + 35);
         this.addRenderableWidget(this.clone);
