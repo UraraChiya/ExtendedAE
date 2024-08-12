@@ -47,7 +47,7 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
                         .size(23,18)
                         .tooltip(Tooltip.create(Component.literal("x"+i)))
                         .build()
-            )
+            );
         }
         // this.multiBtns.add(
         //         Button.builder(Component.literal("x2"), b -> EPPNetworkHandler.INSTANCE.sendToServer(new CGenericPacket("modify", 2, false)))
