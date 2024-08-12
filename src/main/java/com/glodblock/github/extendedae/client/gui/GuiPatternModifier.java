@@ -30,7 +30,7 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
         4096, 1024, 256, 64, 16, 4,
         29, 27, 23, 21, 19, 17,
         13, 11, 7, 5, 3, 2
-    }
+    };
     // {2, 3, 5, 7, 11, 13,
     // 17, 19, 21, 23, 27, 29,
     // 4, 16, 64, 256, 1024, 4096};
