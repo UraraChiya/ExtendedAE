@@ -29,7 +29,8 @@ public class GuiPatternModifier extends AEBaseScreen<ContainerPatternModifier> {
     private int[] multis ={
         2, 3, 5, 7, 11, 13,
         17, 19, 21, 23, 27, 29,
-        4, 16, 64, 256, 1024, 4096};
+        4, 16, 64, 256, 1024, 4096
+    };
 
     public GuiPatternModifier(ContainerPatternModifier menu, Inventory playerInventory, Component title, ScreenStyle style) {
         super(menu, playerInventory, title, style);
