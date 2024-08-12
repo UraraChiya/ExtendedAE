@@ -34,7 +34,9 @@ jobs:
       uses: gradle/actions/setup-gradle@dbbdc275be76ac10734476cc723d82dfe7ec6eda # v3.4.2
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build
+      run: |
+        chmod +x gradlew
+        ./gradlew build
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.6
